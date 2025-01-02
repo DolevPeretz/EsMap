@@ -27,8 +27,11 @@ function App() {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             setCurrentLocation({
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
+
+              lat: 31.25181,
+              lng: 34.7913,
+              // lat: position.coords.latitude,
+              // lng: position.coords.longitude,
             });
           },
           (error) => console.error("שגיאה בקבלת מיקום המשתמש:", error)
