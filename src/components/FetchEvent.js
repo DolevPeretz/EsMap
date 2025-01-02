@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { use } from "react";
 
 const FetchEvent = ({ placeName, setEvent }) => {
     useEffect(() => {

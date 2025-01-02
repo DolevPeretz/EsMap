@@ -20,7 +20,6 @@ router.post('/save-places', async (req, res) => {
   }
 });
 
-
 // POST route to add a review
 router.post('/add-review', upload.single('image'), addReview);
 

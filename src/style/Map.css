@@ -103,3 +103,46 @@
     font-size: 14px;
     color: #666;
   }
+
+  /* עיצוב מסגרת ה-InfoWindow */
+.gm-style-iw {
+  background-color: #2c3e5088  !important; /* צבע הרקע למסגרת */
+  color: #fff; /* צבע טקסט */
+  border-radius: 10px; /* עיגול פינות למסגרת */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* הוספת צל */
+}
+
+
+/* עיצוב שולי המסגרת */
+.gm-style-iw-c {
+  border: 2px solid #2c3e5088  !important; /* צבע המסגרת */
+  border-radius: 10px; /* עיגול פינות */
+}
+/* עיצוב פס הגלילה עבור InfoWindow */
+.gm-style-iw {
+  overflow: auto; /* מאפשר גלילה במידת הצורך */
+}
+
+/* עיצוב פס הגלילה */
+.gm-style-iw::-webkit-scrollbar {
+  width: 12px; /* רוחב פס הגלילה */
+}
+
+.gm-style-iw::-webkit-scrollbar-track {
+  background: #2c3e5088 ; /* צבע הרקע של פס הגלילה */
+  border-radius: 10px; /* עיגול פינות */
+}
+
+.gm-style-iw::-webkit-scrollbar-thumb {
+  background: #2c3e5088 ; /* צבע פס הגלילה הנע */
+  border-radius: 10px; /* עיגול פינות */
+}
+
+.gm-style-iw::-webkit-scrollbar-thumb:hover {
+  background: #888; /* צבע בהובר */
+}
+.body{
+  font-family: 'Montserrat', sans-serif; /* פונט מודרני */
+
+}

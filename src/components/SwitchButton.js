@@ -2,9 +2,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../style/SwitchButton.css';
 import Fetch from './Fetch';
-const SwitchButton = ({ onFilteredPlacesChange, currentLocation }) => {
+import { useLocation } from '../Context/LocationContext';
+
+
+
+const SwitchButton = ({ onFilteredPlacesChange }) => {
     const [isOpenFilterActive, setIsOpenFilterActive] = useState(false);
     const [updatedPlaces, setUpdatedPlaces] = useState([]);
+    const { currentLocation, setCurrentLocation } = useLocation();
+
     const [places, setPlaces] = useState([]); // save the updets place from db
     useEffect(() => {
         const fetchOpeningHours = async () => {

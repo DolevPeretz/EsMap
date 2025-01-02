@@ -36,9 +36,10 @@ import party_green from '../assets/images/party_green.png';
 import party_red from '../assets/images/party_red.png';
 import party_yellow from '../assets/images/party_yellow.png';
 
+import { useLocation } from '../Context/LocationContext';
 
 
-const Map = ({ currentLocation, places, setPlaces }) => {
+const Map = ({ places, setPlaces }) => {
 
 
 
@@ -50,6 +51,7 @@ const Map = ({ currentLocation, places, setPlaces }) => {
   const [nameOfPlaces, setNameOfPlaces] = useState([]);
 
   // const [IDSevents, setIDSevents] = useState([]); 
+  const { currentLocation, setCurrentLocation } = useLocation();
 
 
   const containerStyle = {
@@ -178,19 +180,19 @@ const Map = ({ currentLocation, places, setPlaces }) => {
   return (
     <div className="map-page" >
 
-      <FetchEvents setEvents={setEvents} currentLocation={currentLocation} />
+      <FetchEvents setEvents={setEvents} />
 
       <div className="MapControls">
         <MapControls selectedType={selectedType} setSelectedType={setSelectedType}
           searchTerm={searchTerm} setSearchTerm={setSearchTerm}
-          handleSearch={handleSearch} currentLocation={currentLocation}
+          handleSearch={handleSearch}
           onFilteredPlacesChange={setPlaces}
           nameOfPlaces={nameOfPlaces}
         />
       </div>
 
       <div className="top-rated-wrapper">
-        <TopRatedPlaces places={places} setSelectedPlace={setSelectedPlace} currentLocation={currentLocation} />
+        <TopRatedPlaces places={places} setSelectedPlace={setSelectedPlace}  />
       </div>
 
       <div className="map-wrapper">
@@ -251,7 +253,11 @@ const Map = ({ currentLocation, places, setPlaces }) => {
               onCloseClick={onCloseFunc}
               options={{ zIndex: 999 }}
             >
+                <div className="custom-info-window">
+
               <PlaceInfo selectedPlace={selectedPlace} onReviewSubmit={handleReviewSubmit} currentLocation={currentLocation} nameOfPlaces={nameOfPlaces} />
+              </div>
+
             </InfoWindow>
           )}
         </GoogleMap>

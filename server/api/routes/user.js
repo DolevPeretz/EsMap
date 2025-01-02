@@ -4,7 +4,6 @@ const { verifyBusiness, login, getPendingUsers, updateUserStatus , addEvent ,get
 const multer = require('multer');
 const adminAuth = require('../middleware/adminAuth'); // ייבוא ה-Middleware
 
-// הגדרת multer (במידה ואתה צריך להעלות קבצים)
 const upload = multer({ dest: 'uploads/' });
 
 router.post(
@@ -26,6 +25,9 @@ router.post('/add-event',upload.single('image'), addEvent);
 router.get("/events", getEvents);
 
 router.get('/getEventByPlaceName/:placeName',getEventByPlaceName);
+
+
+
 module.exports = router;
 
 

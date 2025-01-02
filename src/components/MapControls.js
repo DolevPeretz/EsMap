@@ -2,9 +2,12 @@ import React from 'react';
 import RadiusFilter from './RadiusFilter';
 import SwitchButton from './SwitchButton';
 import SwitchButton2 from './SwitchButton2';
+import { useLocation } from '../Context/LocationContext';
 
 import "../style/MapControls.css"
-const MapControls = ({ selectedType, setSelectedType, searchTerm, setSearchTerm, handleSearch, currentLocation, onFilteredPlacesChange,nameOfPlaces }) => {
+const MapControls = ({ selectedType, setSelectedType, searchTerm, setSearchTerm, handleSearch, onFilteredPlacesChange,nameOfPlaces }) => {
+  const { currentLocation, setCurrentLocation } = useLocation();
+
   return (
     <div className="container">
       <div style={{ marginTop: '10px', marginBottom: '10px' }}>

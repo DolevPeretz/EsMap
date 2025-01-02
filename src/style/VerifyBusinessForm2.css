@@ -1,0 +1,524 @@
+.artboard-screen {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.artboard-screen .artboard-2 {
+  height: 1080px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.artboard-screen .overlap-5 {
+  height: 1080px;
+  left: -4px;
+  position: relative;
+}
+
+.artboard-screen .rectangle-16 {
+  background-color: #303030;
+  height: 1080px;
+  left: 0;
+  opacity: 0.64;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.artboard-screen .group-19 {
+  height: 746px;
+  left: 748px;
+  position: absolute;
+  top: 167px;
+  width: 433px;
+}
+
+.artboard-screen .overlap-6 {
+  height: 746px;
+  position: relative;
+}
+
+.artboard-screen .rectangle-17 {
+  background-color: #303030;
+  border-radius: 70px;
+  height: 745px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 433px;
+}
+
+.artboard-screen .rectangle-18 {
+  background-color: #38d288;
+  border-radius: 0px 0px 48px 48px;
+  height: 80px;
+  left: 83px;
+  position: absolute;
+  top: 0;
+  width: 278px;
+}
+
+.artboard-screen .rectangle-19 {
+  background-color: #f9f9f9;
+  border-radius: 70px;
+  height: 398px;
+  left: 0;
+  position: absolute;
+  top: 348px;
+  width: 433px;
+}
+
+.artboard-screen .text-wrapper-42 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 24px;
+  font-weight: 900;
+  left: 116px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 34px;
+  white-space: nowrap;
+}
+
+.artboard-screen .text-wrapper-43 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 174px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+}
+
+.artboard-screen .text-wrapper-44 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 302px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 151px;
+  white-space: nowrap;
+}
+
+.artboard-screen .text-wrapper-45 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 331px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 209px;
+  white-space: nowrap;
+}
+
+.artboard-screen .text-wrapper-46 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 312px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 265px;
+  white-space: nowrap;
+}
+
+.artboard-screen .text-wrapper-47 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  left: 46px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  top: 92px;
+  white-space: nowrap;
+}
+
+.artboard-screen .loogo-20 {
+  display: block;
+  height: 79px;
+  left: 183px;
+  object-fit: cover;
+  position: absolute;
+  top: 309px;
+  width: 79px;
+}
+
+.artboard-screen .rectangle-20 {
+  border: 1px solid;
+  border-color: #ffffff;
+  border-radius: 24px;
+  height: 32px;
+  left: 67px;
+  position: absolute;
+  top: 282px;
+  transition: all 0.8s ease;
+  width: 299px;
+}
+
+.artboard-screen .rectangle-20:hover {
+  transform: scale(1.05);
+}
+
+.artboard-screen .icon-ionic-ios-arrow-4 {
+  height: 21px;
+  left: 392px;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+  transition: all 0.4s ease;
+  width: 12px;
+}
+
+.artboard-screen .icon-ionic-ios-arrow-4:hover {
+  transform: scale(1.3);
+}
+
+.artboard-screen .text-wrapper-48 {
+  color: #38d288;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 24px;
+  font-weight: 900;
+  left: 180px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 399px;
+  white-space: nowrap;
+}
+
+.artboard-screen .text-wrapper-49 {
+  color: #38d288;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 12px;
+  font-weight: 300;
+  left: 71px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  top: 428px;
+  white-space: nowrap;
+}
+
+.artboard-screen .group-20 {
+  background-color: #303030;
+  border-radius: 24px;
+  height: 40px;
+  left: 73px;
+  position: absolute;
+  top: 460px;
+  transition: all 0.8s ease;
+  width: 299px;
+}
+
+.artboard-screen .group-20:hover {
+  transform: scale(1.05);
+}
+
+.artboard-screen .text-wrapper-50 {
+  color: #f9f9f9;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 182px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 15px;
+  white-space: nowrap;
+}
+
+.artboard-screen .icon-awesome-file-2 {
+  height: 19px;
+  left: 21px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 14px;
+}
+
+.artboard-screen .group-21 {
+  background-color: #303030;
+  border-radius: 24px;
+  height: 40px;
+  left: 73px;
+  position: absolute;
+  top: 515px;
+  transition: all 0.8s ease;
+  width: 299px;
+}
+
+.artboard-screen .group-21:hover {
+  transform: scale(1.05);
+}
+
+.artboard-screen .text-wrapper-51 {
+  color: #f9f9f9;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 241px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 14px;
+  white-space: nowrap;
+}
+
+.artboard-screen .icon-awesome-file-3 {
+  height: 19px;
+  left: 21px;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  width: 14px;
+}
+
+.artboard-screen .group-22 {
+  background-color: #303030;
+  border-radius: 24px;
+  height: 39px;
+  left: 73px;
+  position: absolute;
+  top: 569px;
+  transition: all 0.8s ease;
+  width: 299px;
+}
+
+.artboard-screen .group-22:hover {
+  transform: scale(1.05);
+}
+
+.artboard-screen .text-wrapper-52 {
+  color: #f9f9f9;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 194px;
+  letter-spacing: 0;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 14px;
+  white-space: nowrap;
+}
+
+.artboard-screen .group-23 {
+  height: 48px;
+  left: 143px;
+  position: absolute;
+  top: 634px;
+  transition: all 0.8s ease;
+  width: 159px;
+}
+
+.artboard-screen .group-23:hover {
+  transform: scale(1.1);
+}
+
+.artboard-screen .overlap-group-4 {
+  border-radius: 43px;
+  height: 48px;
+  position: relative;
+}
+
+.artboard-screen .rectangle-21 {
+  background-color: #37d288;
+  border-radius: 43px;
+  height: 48px;
+  left: 0;
+  opacity: 0.97;
+  position: absolute;
+  top: 0;
+  width: 159px;
+}
+
+.artboard-screen .text-wrapper-53 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  left: 58px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+}
+
+.artboard-screen .layer {
+  background-image: url(https://cdn.animaapp.com/projects/67716ec48605776e046a88d7/releases/67740b23f2c0899444b67137/img/path-4@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 25px;
+  left: 13px;
+  position: absolute;
+  top: 11px;
+  width: 27px;
+}
+
+.artboard-screen .path-4 {
+  height: 6px;
+  left: 9px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 9px;
+}
+
+.artboard-screen .group-24 {
+  border: 1px solid;
+  border-color: #ffffff;
+  border-radius: 24px;
+  height: 31px;
+  left: 815px;
+  position: absolute;
+  top: 334px;
+  transition: all 0.6s ease;
+  width: 299px;
+}
+
+.artboard-screen .group-24:hover {
+  transform: scale(1.05);
+}
+
+.artboard-screen .text-input-3 {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  height: 16px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 10px;
+  padding: 0;
+  position: relative;
+  top: 3px;
+  width: 274px;
+  outline: none;
+
+}
+
+.artboard-screen .text-input-3::placeholder {
+  color: #ffffff99;
+}
+
+.artboard-screen .group-25 {
+  border: 1px solid;
+  border-color: #ffffff;
+  border-radius: 24px;
+  height: 31px;
+  left: 815px;
+  position: absolute;
+  top: 393px;
+  transition: all 0.6s ease;
+  width: 299px;
+}
+
+.artboard-screen .group-25:hover {
+  transform: scale(1.05);
+}
+
+.artboard-screen .text-input-4 {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  height: 16px;
+  left: 12px;
+  letter-spacing: 0;
+  line-height: 10px;
+  padding: 0;
+  position: relative;
+  top: 3px;
+  width: 274px;
+  outline: none;
+
+}
+
+.artboard-screen .text-input-4::placeholder {
+  color: #ffffff99;
+}
+
+.artboard-screen .text-input-5 {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  direction: rtl;
+  font-family: "Heebo", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  height: 16px;
+  left: 832px;
+  letter-spacing: 0;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  top: 458px;
+  width: 274px;
+  outline: none;
+
+}
+
+.artboard-screen .text-input-5::placeholder {
+  color: #ffffff99;
+}
+.artboard .group-5 {
+  border: 1px solid;
+  border-color: #ffffff;
+  border-radius: 24px;
+  height: 32px;
+  left: 815px;
+  position: absolute;
+  top: 449px;
+  transition: all 0.8s ease;
+  width: 299px;
+}
+
+.artboard .group-5:hover {
+  transform: scale(1.05);
+}

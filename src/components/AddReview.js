@@ -9,7 +9,7 @@ const AddReview = ({ onReviewSubmit, _id }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append('rating', rating);
+        formData.append('rating', rating ?  rating : 0);
         formData.append('comment', review.comment);
         formData.append('image', image); // הוספת התמונה ל-FormData
         onReviewSubmit(_id, formData);

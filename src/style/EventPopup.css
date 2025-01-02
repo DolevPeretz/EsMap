@@ -56,7 +56,8 @@
   
   /* תוכן הפופ-אפ */
   .popup-content {
-    text-align: left;
+    direction: rtl;
+
   }
   
   

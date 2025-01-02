@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { useLocation } from '../Context/LocationContext';
 
-function Fetch({ setPlaces, currentLocation }) {
+function Fetch({ setPlaces }) {
+  const { currentLocation, setCurrentLocation } = useLocation();
+
   const fetchSavedPlaces = async () => {
     if (!currentLocation) {
       console.log("Waiting for currentLocation to load...");

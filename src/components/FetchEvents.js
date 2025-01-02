@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useLocation } from '../Context/LocationContext';
 
-const FetchEvents = ({ setEvents, currentLocation }) => {
+const FetchEvents = ({ setEvents }) => {
   const [loading, setLoading] = useState(true); // מציין טעינה
   const [error, setError] = useState(null); // מציין שגיאה
+  const { currentLocation, setCurrentLocation } = useLocation();
 
   // פונקציה לחישוב המרחק בין שתי נקודות
   const calculateDistance = (lat1, lon1, lat2, lon2) => {

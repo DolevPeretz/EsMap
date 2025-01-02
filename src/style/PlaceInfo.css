@@ -2,7 +2,7 @@
   text-align: left;
   direction: ltr;
   padding: 20px;
-  background-color: #2C3E50;
+  background-color: #2c3e5088;
   color: #FFFFFF; /* טקסט לבן */
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -59,8 +59,8 @@
 
 /* תמונה */
 .place-info-photo {
-  width: 100%;
-  height: auto;
+  width: 500px;
+  height: 300px;
   border-radius: 8px;
   margin-top: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);

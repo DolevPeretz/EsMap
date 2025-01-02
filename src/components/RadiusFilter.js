@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Fetch from './Fetch';
+import { useLocation } from '../Context/LocationContext';
 
-const RadiusFilter = ({ currentLocation, onFilteredPlacesChange }) => {
+
+const RadiusFilter = ({onFilteredPlacesChange }) => {
   const [selectedRadius, setSelectedRadius] = useState('all');
+  const { currentLocation, setCurrentLocation } = useLocation();
 
   const [places, setPlaces] = useState([]);
 

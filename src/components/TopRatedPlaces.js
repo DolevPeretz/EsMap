@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import '../style/TopRatedPlaces.css';
+import { useLocation } from '../Context/LocationContext';
 
 // add window of the top rated location near by 5 km to the current location
-const TopRatedPlaces = ({ places,setSelectedPlace ,currentLocation }) => {
+const TopRatedPlaces = ({ places,setSelectedPlace  }) => {
+
+  const { currentLocation, setCurrentLocation } = useLocation();
 
   const handleSelectedPlace = (Place) => {
     setSelectedPlace(Place)

@@ -1,0 +1,499 @@
+.artboard-screen {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .artboard-screen .div-wrapper {
+    height: 1080px;
+    width: 1920px;
+  }
+  
+  .artboard-screen .overlap-2 {
+    height: 1080px;
+    position: relative;
+  }
+  
+  .artboard-screen .rectangle-6 {
+    background-color: #303030;
+    height: 1080px;
+    left: 0;
+    opacity: 0.64;
+    position: absolute;
+    top: 0;
+    width: 1920px;
+  }
+  
+  .artboard-screen .rectangle-7 {
+    background-color: #303030;
+    border-radius: 70px;
+    height: 745px;
+    left: 755px;
+    position: absolute;
+    top: 172px;
+    width: 434px;
+  }
+  
+  .artboard-screen .rectangle-8 {
+    background-color: #38d288;
+    border-radius: 0px 0px 48px 48px;
+    height: 93px;
+    left: 837px;
+    position: absolute;
+    top: 167px;
+    width: 279px;
+  }
+  
+  .artboard-screen .rectangle-9 {
+    background-color: #f9f9f9;
+    border-radius: 70px;
+    height: 190px;
+    left: 754px;
+    position: absolute;
+    top: 727px;
+    width: 434px;
+  }
+  
+  .artboard-screen .text-wrapper-13 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 24px;
+    font-weight: 900;
+    left: 878px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: left;
+    top: 208px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-14 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 24px;
+    font-weight: 300;
+    left: 923px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: left;
+    top: 182px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-15 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1083px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 282px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-16 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1081px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 340px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-17 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1032px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 523px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-18 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1049px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 586px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-19 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1061px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 646px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-20 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1071px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 401px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-input {
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    height: 16px;
+    left: 1077px;
+    letter-spacing: 0;
+    line-height: 10px;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    top: 367px;
+    white-space: nowrap;
+    width: 38px;
+  }
+  
+  .artboard-screen .text-input::placeholder {
+    color: #ffffff99;
+  }
+  
+  .artboard-screen .input {
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    height: 16px;
+    left: 1077px;
+    letter-spacing: 0;
+    line-height: 10px;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    top: 549px;
+    white-space: nowrap;
+    width: 38px;
+  }
+  
+  .artboard-screen .input::placeholder {
+    color: #ffffff99;
+  }
+  
+  .artboard-screen .text-wrapper-21 {
+    color: #ffffff;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1061px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    top: 616px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-22 {
+    color: #ffffff;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1061px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    top: 673px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-input-2 {
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    height: 16px;
+    left: 1077px;
+    letter-spacing: 0;
+    line-height: 10px;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    top: 425px;
+    white-space: nowrap;
+    width: 38px;
+  }
+  
+  .artboard-screen .text-input-2::placeholder {
+    color: #ffffff99;
+  }
+  
+  .artboard-screen .text-wrapper-23 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 12px;
+    font-weight: 300;
+    left: 939px;
+    letter-spacing: 0;
+    line-height: 12px;
+    position: absolute;
+    text-align: left;
+    top: 233px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .rectangle-10 {
+    background-color: #303030;
+    border-radius: 33px;
+    height: 78px;
+    left: 846px;
+    position: absolute;
+    top: 789px;
+    width: 251px;
+  }
+  
+  .artboard-screen .img {
+    height: 29px;
+    left: 1000px;
+    object-fit: cover;
+    position: absolute;
+    top: 826px;
+    width: 21px;
+  }
+  
+  .artboard-screen .loogo-2 {
+    display: block;
+    height: 71px;
+    left: 936px;
+    object-fit: cover;
+    position: absolute;
+    top: 697px;
+    width: 71px;
+  }
+  
+  .artboard-screen .rectangle-11 {
+    background-color: #37d288;
+    border-radius: 43px;
+    height: 48px;
+    left: 820px;
+    opacity: 0.97;
+    position: absolute;
+    top: 768px;
+    width: 302px;
+  }
+  
+  .artboard-screen .text-wrapper-24 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 931px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 780px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .text-wrapper-25 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 17px;
+    font-weight: 500;
+    left: 917px;
+    letter-spacing: 0;
+    line-height: 17px;
+    position: absolute;
+    text-align: left;
+    top: 832px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .rectangle-12 {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 24px;
+    height: 32px;
+    left: 830px;
+    position: absolute;
+    top: 358px;
+    width: 299px;
+  }
+  
+  .artboard-screen .rectangle-13 {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 24px;
+    height: 31px;
+    left: 830px;
+    position: absolute;
+    top: 541px;
+    width: 299px;
+  }
+  
+  .artboard-screen .rectangle-14 {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 24px;
+    height: 31px;
+    left: 830px;
+    position: absolute;
+    top: 606px;
+    width: 299px;
+  }
+  
+  .artboard-screen .rectangle-15 {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 24px;
+    height: 32px;
+    left: 830px;
+    position: absolute;
+    top: 663px;
+    width: 299px;
+  }
+  
+  .artboard-screen .rectangle-16 {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 24px;
+    height: 93px;
+    left: 830px;
+    position: absolute;
+    top: 417px;
+    width: 299px;
+  }
+  
+  .artboard-screen .group-7 {
+    height: 31px;
+    left: 828px;
+    position: absolute;
+    top: 299px;
+    width: 299px;
+  }
+  
+  .artboard-screen .overlap-group-3 {
+    border-radius: 24px;
+    height: 31px;
+    position: relative;
+  }
+  
+  .artboard-screen .text-wrapper-26 {
+    color: #ffffff;
+    direction: rtl;
+    font-family: "Heebo", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 261px;
+    letter-spacing: 0;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 9px;
+    white-space: nowrap;
+  }
+  
+  .artboard-screen .rectangle-17 {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 24px;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 299px;
+  }
+  
+  .artboard-screen .icon-ionic-ios-arrow-2 {
+    height: 8px;
+    left: 847px;
+    object-fit: cover;
+    position: absolute;
+    top: 309px;
+    width: 14px;
+  }
+  
+  .artboard-screen .icon-ionic-ios-arrow-3 {
+    height: 21px;
+    left: 1141px;
+    object-fit: cover;
+    position: absolute;
+    top: 199px;
+    width: 12px;
+  }
+  
+  .artboard-screen .icon-material-date {
+    height: 18px;
+    left: 846px;
+    object-fit: cover;
+    position: absolute;
+    top: 613px;
+    width: 16px;
+  }
+  
+  .artboard-screen .icon-material-date-2 {
+    height: 18px;
+    left: 846px;
+    object-fit: cover;
+    position: absolute;
+    top: 670px;
+    width: 16px;
+  }
+  .input, .text-input, .text-input-2, textarea, select {
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+  }
+  button {
+    cursor: pointer;
+  }
+  

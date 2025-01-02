@@ -4,7 +4,7 @@ import "../style/EventDetails.css";
 
 
 
-const EventDetails = ({ event }) => {
+const EventDetails = ({ event  }) => {
     const handleShare = () => {
         if (navigator.share) {
           navigator
@@ -34,7 +34,8 @@ const EventDetails = ({ event }) => {
             <div className="event-details">
             
                 <p className="event-date">
-                    <strong>Date:</strong> {new Date(event.dateTime).toLocaleDateString()}
+                    <strong>{new Date(event.dateTime).toLocaleDateString()} -  {new Date(event.dateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</strong>             
+
                 </p>
                
                <button

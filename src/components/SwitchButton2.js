@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Fetch from './Fetch';
 import '../style/SwitchButton.css';
+import { useLocation } from '../Context/LocationContext';
 
-const SwitchButton2 = ({ nameOfPlaces, onFilteredPlacesChange, currentLocation }) => {
+const SwitchButton2 = ({ nameOfPlaces, onFilteredPlacesChange }) => {
+    const { currentLocation, setCurrentLocation } = useLocation();
+
     const [isCategoryFilterActive, setIsCategoryFilterActive] = useState(false);
     const [places, setPlaces] = useState([]); // שמירת המקומות
 

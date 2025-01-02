@@ -1,70 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Event Management and Local Discovery Platform
 
-## Available Scripts
+Project Objective :
+The application is designed to share upcoming events at nearby locations with users and allow business owners to easily publish this information.
 
-In the project directory, you can run:
+What Makes Our Platform Unique?
+	•	Access to Upcoming Events at Nearby Locations – Users can view events happening at places close to their current location.
+	•	Reviews and Experiences – Alongside events, users can read reviews and recommendations from previous customers about various businesses.
+	•	Event Publishing by Business Owners – Business owners verify their ownership and publish upcoming events through the platform.
 
-### `npm start`
+How Does It Work?
+	1.	Business Owner Verification – The business owner uploads documents verifying ownership. Site administrators approve the documents and enable the owner to publish upcoming events.
+	2.	Displaying Nearby Locations – The user opens the application, the map loads according to their current location, and displays nearby businesses.
+	3.	Access to Events and Reviews – Users can click on points on the map to view business details, reviews, ratings, and upcoming events at that location.
+Additionally, users are presented with a window showcasing upcoming events within a 5-kilometer radius and a list of the top-rated places.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technologies:
+	•	Frontend: React, CSS
+	•	Backend: Node.js, Express, MongoDB
+	•	External API: Google Maps API
+	•	File Management and Verification: Multer, bcrypt, Axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation and Execution:
+git clone https://github.com/username/event-management.git  
+cd event-management  
+npm install  
+cd client  
+npm install  
 
-### `npm test`
+Running the Project
+cd server                                   # Run Server  
+node server.js                              # Start Backend Server  
+lcp --proxyUrl https://maps.googleapis.com  # Proxy Server Execution:
+npm start                                   # Run Frontend  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+System Usage:
+	•	Adding Events – After verifying the business, the owner can add events through the interface.
+	•	Reviewing Nearby Events – Users open the map and can view upcoming events at nearby locations.
+	•	Reviews and Ratings – Users can add reviews about businesses directly through the platform after visiting a location.

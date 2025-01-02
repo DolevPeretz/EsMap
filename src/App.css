@@ -25,4 +25,7 @@
     border: 1px solid #ddd;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+  .body{
+    font-family: 'Montserrat', sans-serif; /* פונט מודרני */
+
+  }

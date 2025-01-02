@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../style/AddEvent.css";
 import axios from 'axios';
 
-const AddEvent = ({ placeName, placeLocation }) => {
+const AddEvent = ({ placeName, placeLocation,handleCloseAddEvent }) => {
   const [formData, setFormData] = useState({
     eventType: "",
     title: "",
@@ -24,10 +24,11 @@ const AddEvent = ({ placeName, placeLocation }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const correctedName = placeName.normalize("NFC");
 
     const Data = new FormData();
     Data.append("eventType", formData.eventType);
-    Data.append("placeName", placeName);
+    Data.append("placeName", correctedName);
     Data.append("eventTitle", formData.title);
     Data.append("eventDescription", formData.description);
     Data.append("dateTime", `${formData.date}T${formData.time}`);
@@ -45,7 +46,9 @@ const AddEvent = ({ placeName, placeLocation }) => {
       if (!response.data) {
         console.log("Event add with error", response.data);
       } else {
+        handleCloseAddEvent()
         alert("Event added successfully");
+        
       }
     } catch (error) {
       console.error("Error adding event:", error);
@@ -55,104 +58,58 @@ const AddEvent = ({ placeName, placeLocation }) => {
 
   return (
     <div className="add-event-container">
-      <h2 className="add-event-title">Add Event for {placeName}</h2>
-      <form className="add-event-form" onSubmit={handleSubmit}>
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="eventType">Event Type</label>
-          <select
-            id="eventType"
-            name="eventType"
-            value={formData.eventType}
-            onChange={handleInputChange}
-            className="add-event-select"
-          >
-            <option value="">Select</option>
-            <option value="popup">Pop-up</option>
-            <option value="concert">Concert</option>
-            <option value="happy-hour">Happy Hour</option>
-            <option value="sale">Sale</option>
-            <option value="show">Show</option>
-            <option value="party">Party</option>
-          </select>
-        </div>
-
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="title">Event Title</label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            value={formData.title}
-            onChange={handleInputChange}
-            placeholder="Enter event title"
-            className="add-event-input"
-          />
-        </div>
-
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="description">Description</label>
-          <textarea
-            id="description"
-            name="description"
-            value={formData.description}
-            onChange={handleInputChange}
-            placeholder="Enter event description"
-            className="add-event-textarea"
-          />
-        </div>
-
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="link">Event Link (Optional)</label>
-          <input
-            type="url"
-            id="link"
-            name="link"
-            value={formData.link}
-            onChange={handleInputChange}
-            placeholder="Enter link"
-            className="add-event-input"
-          />
-        </div>
-
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="date">Event Date</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            value={formData.date}
-            onChange={handleInputChange}
-            className="add-event-input"
-          />
-        </div>
-
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="time">Event Time</label>
-          <input
-            type="time"
-            id="time"
-            name="time"
-            value={formData.time}
-            onChange={handleInputChange}
-            className="add-event-input"
-          />
-        </div>
-
-        <div className="add-event-form-group">
-          <label className="add-event-label" htmlFor="image">Upload Image</label>
-          <input
-            type="file"
-            id="image"
-            name="image"
-            accept="image/*"
-            onChange={handleImageChange}
-            className="add-event-input"
-          />
-        </div>
-
-        <button type="submit" className="add-event-submit-btn">Submit Event</button>
-      </form>
-    </div>
+    <h2 className="add-event-title">Add Event for {placeName}</h2>
+    <form className="add-event-form" onSubmit={handleSubmit}>
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="eventType">Event Type</label>
+        <select id="eventType" name="eventType" className="add-event-select" onChange={handleInputChange}>
+          <option value="">Select</option>
+          <option value="popup">Popup</option>
+          <option value="happy-hour">Happy Hour</option>
+          <option value="sale">Sale</option>
+          <option value="show">Show</option>
+          <option value="party">Party</option>
+        </select>
+      </div>
+  
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="title">Event Title</label>
+        <input id="title" name="title" type="text" className="add-event-input" placeholder="Enter event title" onChange={handleInputChange} />
+      </div>
+  
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="description">Description</label>
+        <textarea id="description" name="description" className="add-event-input" placeholder="Enter event description" onChange={handleInputChange} />
+      </div>
+  
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="link">Event Link (Optional)</label>
+        <input id="link" name="link" type="text" className="add-event-input" placeholder="Enter link" onChange={handleInputChange} />
+      </div>
+  
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="date">Event Date</label>
+        <input id="date" name="date" type="date" className="add-event-input" onChange={handleInputChange} />
+      </div>
+  
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="time">Event Time</label>
+        <select id="time" name="time" className="add-event-select" onChange={handleInputChange}>
+          {Array.from({ length: 24 }, (_, i) => (
+            <option key={i} value={`${i}:00`}>{`${i}:00`}</option>
+          ))}
+        </select>
+      </div>
+  
+      <div className="add-event-form-group">
+        <label className="add-event-label" htmlFor="image">Upload Image</label>
+        <input id="image" name="image" type="file" className="add-event-input" onChange={handleImageChange} />
+      </div>
+  
+      <button type="submit" className="add-event-submit-btn">Submit Event</button>
+    </form>
+  </div>
+  
   );
 };
 
