@@ -1,0 +1,16 @@
+services:
+  server:
+    container_name: node-server
+    build: ./server
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+
+  client:
+    container_name: react-client
+    build: ./client
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
