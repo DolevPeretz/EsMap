@@ -27,6 +27,7 @@ export default function Fetch({ setPlaces, currentLocation }) {
       const res = await axios.get("http://localhost:5001/api/get-places");
 
       const list = Array.isArray(res.data?.data) ? res.data.data : [];
+      console.log("places:", list.length, list[0]);
 
       const filtered = list
         .filter(
