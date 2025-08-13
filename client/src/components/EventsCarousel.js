@@ -3,7 +3,6 @@ import AddEvent from "./AddEvents";
 import FetchEvents from "./FetchEvents";
 import EventPopup from "./EventPopup";
 import "../style/EventsCarousel.css";
-import { useLocation } from '../Context/LocationContext';
 
 const EventsCarousel = () => {
   const [showAddEvent, setShowAddEvent] = useState(false);
@@ -12,8 +11,6 @@ const EventsCarousel = () => {
   const [placeLocation, setPlaceLocation] = useState(false);
   const [eventss, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null); // שמירת האירוע שנבחר
-  const { currentLocation, setCurrentLocation } = useLocation();
-
 
   // for the scrolling
   const carouselRef = useRef(null);
@@ -37,27 +34,29 @@ const EventsCarousel = () => {
         } else if (scrollLeft <= 0) {
           setDirection(1);
         }
-        carouselRef.current.scrollBy({ left: 50 * direction, behavior: "smooth" });
+        carouselRef.current.scrollBy({
+          left: 50 * direction,
+          behavior: "smooth",
+        });
       }
     }, 10);
     return () => clearInterval(interval); // ניקוי ה-interval
   }, [direction]);
-  // בדיקה אם התחבר בתור בעל עסק ורק אם כן יש לו את האפשרות להוסיף אירוע חדש 
+  // בדיקה אם התחבר בתור בעל עסק ורק אם כן יש לו את האפשרות להוסיף אירוע חדש
   useEffect(() => {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem("authToken");
 
     if (token) {
       try {
-        const decodedToken = JSON.parse(atob(token.split('.')[1])); // פענוח ה-Token
+        const decodedToken = JSON.parse(atob(token.split(".")[1])); // פענוח ה-Token
         setPlaceName(decodeURIComponent(decodedToken.placeName));
-        setPlaceLocation(decodedToken.placeLocation)
-        setIsUser(true)
+        setPlaceLocation(decodedToken.placeLocation);
+        setIsUser(true);
       } catch (error) {
-        console.error('Invalid token:', error);
+        console.error("Invalid token:", error);
       }
     }
   }, []);
-
 
   const handleButtonClick = (event) => {
     setSelectedEvent(event); // הגדרת האירוע שנבחר
@@ -71,14 +70,17 @@ const EventsCarousel = () => {
     <div className="events-carousel-container">
       <FetchEvents setEvents={setEvents} />
       <div className="events-carousel" ref={carouselRef}>
-
-
-        {isUser && <div className="event-card add-event-card" onClick={handleAddEventClick}>
-          <div className="add-event-content">
-            <span className="add-event-icon">+</span>
-            <p className="add-event-text">Add Event</p>
+        {isUser && (
+          <div
+            className="event-card add-event-card"
+            onClick={handleAddEventClick}
+          >
+            <div className="add-event-content">
+              <span className="add-event-icon">+</span>
+              <p className="add-event-text">Add Event</p>
+            </div>
           </div>
-        </div>}
+        )}
 
         {eventss.map((event, index) => (
           <div
@@ -92,15 +94,17 @@ const EventsCarousel = () => {
               className="event-card-image"
             />
             <div className="event-card-overlay">
-              <p>{event.eventType} - {event.eventTitle}</p>
-              <p>{event.placeName} - {new Date(event.dateTime).toLocaleDateString()}</p>
+              <p>
+                {event.eventType} - {event.eventTitle}
+              </p>
+              <p>
+                {event.placeName} -{" "}
+                {new Date(event.dateTime).toLocaleDateString()}
+              </p>
             </div>
           </div>
         ))}
-
-
       </div>
-
 
       {selectedEvent && (
         <EventPopup event={selectedEvent} onClose={closePopup} /> // הצגת הפופ-אפ אם יש אירוע נבחר
@@ -108,7 +112,11 @@ const EventsCarousel = () => {
       {/* מציג את רכיב AddEvent אם המשתמש לחץ על כפתור ההוספה */}
       {showAddEvent && (
         <div className="add-event-modal">
-          <AddEvent placeName={placeName} placeLocation={placeLocation} handleCloseAddEvent={handleCloseAddEvent} />
+          <AddEvent
+            placeName={placeName}
+            placeLocation={placeLocation}
+            handleCloseAddEvent={handleCloseAddEvent}
+          />
           <button className="close-add-event" onClick={handleCloseAddEvent}>
             Close
           </button>

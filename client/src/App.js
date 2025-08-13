@@ -22,10 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* {isAdmin && <AdminDashboard />}
+      <AdminDashboard />
       <WelcomeOptionsModal />
 
-      {!isAdmin && ( */}
       <>
         {/* <FetchApi setPlaces={setPlaces} currentLocation={currentLocation} /> */}
 
