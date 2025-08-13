@@ -11,24 +11,14 @@ import { ToastContainer } from "react-toastify";
 function App() {
   const [places, setPlaces] = useState([]);
   const { currentLocation, setCurrentLocation, token } = useLocation();
-  const [isAdmin, setIsAdmin] = useState(false); // מצב עבור אדמין
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  useEffect(() => {
-    if (token) {
-      try {
-        const decodedToken = JSON.parse(atob(token.split(".")[1]));
-        if (decodedToken.role === "admin") {
-          setIsAdmin(true);
-        }
-      } catch (error) {
-        console.error("Invalid token:", error);
-      }
-    }
-  }, [token]);
+  const hasCoords =
+    currentLocation &&
+    Number.isFinite(currentLocation.lat) &&
+    Number.isFinite(currentLocation.lng);
 
-  if (!currentLocation) {
-    return <div>מחכים למיקום...</div>;
-  }
+  if (!hasCoords) return <div>מחכים למיקום…</div>;
 
   return (
     <div className="App">
@@ -37,17 +27,16 @@ function App() {
 
       {!isAdmin && ( */}
       <>
-        <FetchApi setPlaces={setPlaces} currentLocation={currentLocation} />
-        {/* 
-        <EventsCarousel />
-        {currentLocation && <Fetch setPlaces={setPlaces} />} */}
+        {/* <FetchApi setPlaces={setPlaces} currentLocation={currentLocation} /> */}
 
-        {/* {places && currentLocation && (
+        <EventsCarousel />
+        <Fetch setPlaces={setPlaces} currentLocation={currentLocation} />
+
+        {places && currentLocation && (
           <Map places={places} setPlaces={setPlaces} />
-        )} */}
+        )}
       </>
-      {/* )} */}
-      {/* 
+
       <ToastContainer
         position="top-center"
         autoClose={4000}
@@ -59,7 +48,7 @@ function App() {
         draggable
         pauseOnHover
         theme={"colored"}
-      /> */}
+      />
     </div>
   );
 }

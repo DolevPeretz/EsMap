@@ -70,80 +70,32 @@
 
 // export default FetchApi;
 
-// // import React, { useState } from 'react';
-// // import axios from 'axios';
-
-// // function FetchPlaces() {
-// //   const [places, setPlaces] = useState([]);
-
-// //   const fetchPlaces = async () => {
-// //     const location = { lat: 31.23, lng: 34.81 }; // מיקום לדוגמה, יכול להיות מיקום משתמש
-
-// //     try {
-// //       // שלח את המיקום ל-Backend
-// //       const response = await axios.post('http://localhost:5001/api/fetch-places', location);
-// //       setPlaces(response.data); // עדכן את המצב עם המקומות שהתקבלו
-// //       console.log('Places fetched and saved:', response.data);
-// //     } catch (error) {
-// //       console.error('Error fetching places:', error);
-// //     }
-// //   };
-
-// //   return (
-// //     <div>
-// //       <button onClick={fetchPlaces}>Fetch Places</button>
-// //       <ul>
-// //         {places.map(place => (
-// //           <li key={place._id}>{place.name} - {place.address}</li>
-// //         ))}
-// //       </ul>
-// //     </div>
-// //   );
-// // }
-
-// // export default FetchPlaces;
-
-// import React, { useState, useEffect } from 'react';
+// import React, { useState } from 'react';
 // import axios from 'axios';
 
-// function FetchPlaces({ setPlaces, currentLocation }) {
-//   const [placesData, setPlacesData] = useState([]); // שינה את שם ה-state המקומי
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState(null); // הוספת סטייט לשגיאות
+// function FetchPlaces() {
+//   const [places, setPlaces] = useState([]);
 
 //   const fetchPlaces = async () => {
-//     setLoading(true);  // הפעלת טעינה
-//     const location = { lat: currentLocation.lat, lng: currentLocation.lng}; // מיקום לדוגמה, יכול להיות מיקום משתמש
+//     const location = { lat: 31.23, lng: 34.81 }; // מיקום לדוגמה, יכול להיות מיקום משתמש
 
 //     try {
+//       // שלח את המיקום ל-Backend
 //       const response = await axios.post('http://localhost:5001/api/fetch-places', location);
-//       setPlacesData(response.data); // עדכון את המצב עם המקומות שהתקבלו
-//       setPlaces(response.data); // עדכון את הסטייט של הקומפוננטה האב
+//       setPlaces(response.data); // עדכן את המצב עם המקומות שהתקבלו
 //       console.log('Places fetched and saved:', response.data);
 //     } catch (error) {
 //       console.error('Error fetching places:', error);
-//       setError(error);  // שמירת השגיאה בסטייט
-//     } finally {
-//       setLoading(false);  // הפסקת טעינה
 //     }
 //   };
 
-//   useEffect(() => {
-//     fetchPlaces();  // קריאה אוטומטית לפונקציה עם טעינת הדף
-//   }, [currentLocation.lat, currentLocation.lng]);
-
 //   return (
 //     <div>
-//       {loading && <p>Loading...</p>}
-//       {error && <p>Error: {error.message}</p>} {/* הצגת שגיאה אם קיימת */}
+//       <button onClick={fetchPlaces}>Fetch Places</button>
 //       <ul>
-//         {Array.isArray(placesData) && placesData.length > 0 ? (
-//           placesData.map(place => (
-//             <li key={place._id}>{place.name} - {place.address}</li>
-//           ))
-//         ) : (
-//           <p>No places found.</p>  // הצגת הודעה אם לא נמצאו מקומות
-//         )}
+//         {places.map(place => (
+//           <li key={place._id}>{place.name} - {place.address}</li>
+//         ))}
 //       </ul>
 //     </div>
 //   );
@@ -152,43 +104,96 @@
 // export default FetchPlaces;
 
 import React, { useState, useEffect } from "react";
-import axios from "axios"; // יבוא axios
+import axios from "axios";
 
-function FetchApi({ setPlaces, currentLocation }) {
+function FetchPlaces({ setPlaces, currentLocation }) {
+  const [placesData, setPlacesData] = useState([]); // שינה את שם ה-state המקומי
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null); // הוספת סטייט לשגיאות
+
+  const fetchPlaces = async () => {
+    setLoading(true); // הפעלת טעינה
+    const location = { lat: currentLocation.lat, lng: currentLocation.lng };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5001/api/fetch-places",
+        location
+      );
+      setPlacesData(response.data); // עדכון את המצב עם המקומות שהתקבלו
+      setPlaces(response.data); // עדכון את הסטייט של הקומפוננטה האב
+      console.log("Places fetched and saved:", response.data);
+    } catch (error) {
+      console.error("Error fetching places:", error);
+      setError(error); // שמירת השגיאה בסטייט
+    } finally {
+      setLoading(false); // הפסקת טעינה
+    }
+  };
 
   useEffect(() => {
-    const fetchPlaces = async () => {
-      if (currentLocation) {
-        setLoading(true);
-        try {
-          // שליחת בקשה לשרת ל-fetch את המקומות עם lat, lng
-          const response = await axios.post(
-            "http://localhost:5001/api/fetch-places",
-            {
-              lat: currentLocation.lat,
-              lng: currentLocation.lng,
-            }
-          );
+    fetchPlaces(); // קריאה אוטומטית לפונקציה עם טעינת הדף
+  }, [currentLocation.lat, currentLocation.lng]);
 
-          // עדכון המקומות במצב ה-React
-          setPlaces(response.data);
-          setLoading(false);
-        } catch (error) {
-          console.error("Error fetching places:", error);
-          setLoading(false);
-        }
-      }
-    };
-
-    fetchPlaces();
-  }, [currentLocation, setPlaces]);
-
-  if (loading) {
-    return <div>מחכים למידע...</div>;
-  }
-
-  return null;
+  return (
+    <div>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>} {/* הצגת שגיאה אם קיימת */}
+      <ul>
+        {Array.isArray(placesData) && placesData.length > 0 ? (
+          placesData.map((place) => (
+            <li key={place._id}>
+              {place.name} - {place.adress}
+            </li>
+          ))
+        ) : (
+          <p>No places found.</p> // הצגת הודעה אם לא נמצאו מקומות
+        )}
+      </ul>
+    </div>
+  );
 }
 
-export default FetchApi;
+export default FetchPlaces;
+
+// import React, { useState, useEffect } from "react";
+// import axios from "axios"; // יבוא axios
+
+// function FetchApi({ setPlaces, currentLocation }) {
+//   const [loading, setLoading] = useState(false);
+
+//   useEffect(() => {
+//     const fetchPlaces = async () => {
+//       if (currentLocation) {
+//         setLoading(true);
+//         try {
+//           // שליחת בקשה לשרת ל-fetch את המקומות עם lat, lng
+//           const response = await axios.post(
+//             "http://localhost:5001/api/fetch-places",
+//             {
+//               lat: currentLocation.lat,
+//               lng: currentLocation.lng,
+//             }
+//           );
+
+//           // עדכון המקומות במצב ה-React
+//           setPlaces(response.data);
+//           setLoading(false);
+//         } catch (error) {
+//           console.error("Error fetching places:", error);
+//           setLoading(false);
+//         }
+//       }
+//     };
+
+//     fetchPlaces();
+//   }, [currentLocation, setPlaces]);
+
+//   if (loading) {
+//     return <div>מחכים למידע...</div>;
+//   }
+
+//   return null;
+// }
+
+// export default FetchApi;
